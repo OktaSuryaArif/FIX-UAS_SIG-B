@@ -13,49 +13,42 @@
         <link href="resources/ol-geocoder.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
-        <style>
-        html, body {
-            background-color: #ffffff;
-        }
-        .ol-control > * {
-            background-color: #f8f8f8!important;
-            color: #444444!important;
-            border-radius: 0px;
-        }
-        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
-            color: #444444!important;
-        }
-        .search-layer-input-search {
-            background-color: #f8f8f8!important;
-        }
-        .ol-control > *:focus, .ol-control >*:hover {
-            background-color: rgba(248, 248, 248, 0.7)!important;
-        } 
-        .ol-control {
-            background-color: rgba(255,255,255,.4) !important;
-            padding: 2px !important;
-        } 
-        </style>
-
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        </style>
-        <title></title>
+        <link rel="stylesheet" href="./resources/dashboard.css">
+        <title>Dashboard GIS</title>
     </head>
     <body>
-        <div id="map">
-            <div id="popup" class="ol-popup">
-                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-                <div id="popup-content"></div>
+        <div id="container">
+            <div id="sidebar">
+                <div id="header">
+                    <img src="images/logo.png" alt="Logo">
+                    <h1>Dashboard GIS</h1>
+                </div>
+                <div id="info">
+                    <h2>Latar Belakang</h2>
+                    <p>Website ini dikembangkan untuk menyediakan informasi geospasial yang relevan dengan bencana alam seperti potensi tsunami, longsor, dan gempa bumi di wilayah tertentu.</p>
+                    <h2>Tujuan</h2>
+                    <p>Tujuan dari website ini adalah untuk memberikan akses mudah kepada pengguna dalam memperoleh data dan informasi geografis yang diperlukan untuk mitigasi bencana.</p>
+                    <h2>Manfaat</h2>
+                    <p>Manfaat website ini antara lain meningkatkan kesadaran masyarakat terhadap potensi bencana alam dan membantu pemerintah dalam mengambil keputusan terkait mitigasi bencana.</p>
+                    <h2>Penyusun</h2>
+                    <p>Iqbal Inggil Anggono (NPM: 2115061063)<br>Okta Surya Arif (NPM: 2155061005)</p>
+                </div>
+                <div id="layer-switcher" class="layer-switcher">
+                    <!-- Layer switcher content here -->
+                </div>
+                <div id="legend">
+                    <!-- Legend content here -->
+                </div>
+            </div>
+            <div id="map">
+                <div id="popup" class="ol-popup">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content"></div>
+                </div>
             </div>
         </div>
         <script src="resources/qgis2web_expressions.js"></script>
-<script src="resources/proj4.js"></script>
+        <script src="resources/proj4.js"></script>
         <script>proj4.defs('EPSG:3857','+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs');</script>
         <script src="resources/polyfills.js"></script>
         <script src="./resources/functions.js"></script>
@@ -65,8 +58,64 @@
         <script src="resources/ol3-search-layer.js"></script>
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/ol-geocoder.js"></script>
-        <script src="layers/Lampung_Zonasi_2.js"></script><script src="layers/Banten_Zonasi_3.js"></script><script src="layers/PEMUKIMAN_AR_50K_4.js"></script><script src="layers/PEMUKIMAN_AR_50K_5.js"></script><script src="layers/PEMUKIMAN_AR_50K_6.js"></script><script src="layers/PEMUKIMAN_AR_50K_7.js"></script><script src="layers/PEMUKIMAN_AR_50K_8.js"></script><script src="layers/PEMUKIMAN_AR_50K_9.js"></script><script src="layers/PEMUKIMAN_AR_50K_10.js"></script><script src="layers/PEMUKIMAN_AR_50K_11.js"></script><script src="layers/PEMUKIMAN_AR_50K_12.js"></script><script src="layers/PEMUKIMAN_AR_50K_13.js"></script><script src="layers/PEMUKIMAN_AR_50K_14.js"></script><script src="layers/PEMUKIMAN_AR_50K_15.js"></script><script src="layers/PEMUKIMAN_AR_50K_16.js"></script><script src="layers/PEMUKIMAN_AR_50K_17.js"></script><script src="layers/PEMUKIMAN_AR_25K_18.js"></script><script src="layers/PEMUKIMAN_AR_25K_19.js"></script><script src="layers/PEMUKIMAN_AR_25K_20.js"></script><script src="layers/PEMUKIMAN_AR_25K_21.js"></script><script src="layers/PEMUKIMAN_AR_25K_22.js"></script><script src="layers/PEMUKIMAN_AR_25K_23.js"></script><script src="layers/KRB_Tsunami_Teluk_Lampung_24.js"></script><script src="layers/KRB_Tsunami_Banten_25.js"></script><script src="layers/LAMPUNG_26.js"></script><script src="layers/BANTEN_27.js"></script><script src="layers/ANAK_KRAKATAU_28.js"></script><script src="layers/DEMPO_29.js"></script><script src="layers/SALAK_30.js"></script>
-        <script src="styles/Lampung_Zonasi_2_style.js"></script><script src="styles/Banten_Zonasi_3_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_4_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_5_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_6_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_7_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_8_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_9_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_10_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_11_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_12_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_13_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_14_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_15_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_16_style.js"></script><script src="styles/PEMUKIMAN_AR_50K_17_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_18_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_19_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_20_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_21_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_22_style.js"></script><script src="styles/PEMUKIMAN_AR_25K_23_style.js"></script><script src="styles/KRB_Tsunami_Teluk_Lampung_24_style.js"></script><script src="styles/KRB_Tsunami_Banten_25_style.js"></script><script src="styles/LAMPUNG_26_style.js"></script><script src="styles/BANTEN_27_style.js"></script><script src="styles/ANAK_KRAKATAU_28_style.js"></script><script src="styles/DEMPO_29_style.js"></script><script src="styles/SALAK_30_style.js"></script>
+        <script src="layers/Lampung_Zonasi_2.js"></script>
+        <script src="layers/Banten_Zonasi_3.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_4.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_5.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_6.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_7.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_8.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_9.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_10.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_11.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_12.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_13.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_14.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_15.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_16.js"></script>
+        <script src="layers/PEMUKIMAN_AR_50K_17.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_18.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_19.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_20.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_21.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_22.js"></script>
+        <script src="layers/PEMUKIMAN_AR_25K_23.js"></script>
+        <script src="layers/KRB_Tsunami_Teluk_Lampung_24.js"></script>
+        <script src="layers/KRB_Tsunami_Banten_25.js"></script>
+        <script src="layers/LAMPUNG_26.js"></script>
+        <script src="layers/BANTEN_27.js"></script>
+        <script src="layers/ANAK_KRAKATAU_28.js"></script>
+        <script src="layers/DEMPO_29.js"></script>
+        <script src="layers/SALAK_30.js"></script>
+        <script src="styles/Lampung_Zonasi_2_style.js"></script>
+        <script src="styles/Banten_Zonasi_3_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_4_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_5_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_6_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_7_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_8_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_9_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_10_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_11_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_12_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_13_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_14_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_15_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_16_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_50K_17_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_18_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_19_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_20_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_21_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_22_style.js"></script>
+        <script src="styles/PEMUKIMAN_AR_25K_23_style.js"></script>
+        <script src="styles/KRB_Tsunami_Teluk_Lampung_24_style.js"></script>
+        <script src="styles/KRB_Tsunami_Banten_25_style.js"></script>
+        <script src="styles/LAMPUNG_26_style.js"></script>
+        <script src="styles/BANTEN_27_style.js"></script>
+        <script src="styles/ANAK_KRAKATAU_28_style.js"></script>
+        <script src="styles/DEMPO_29_style.js"></script>
+        <script src="styles/SALAK_30_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>

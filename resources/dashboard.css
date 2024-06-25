@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 25%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#header h1 {
+    font-size: 1.5em;
+    color: #444;
+}
+
+#info h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+#info p {
+    color: #666;
+    line-height: 1.5;
+}
+
+#layer-switcher {
+    margin-top: 20px;
+}
+
+#legend {
+    margin-top: 20px;
+}
+
+#map {
+    width: 75%;
+    height: 100%;
+}
+
+.ol-popup {
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {
+    content: "✖";
+}
